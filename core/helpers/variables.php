@@ -1,7 +1,8 @@
-<?php   
+<?php
+    $obj_password = new Classes\ClassPassword(); 
+
      
     /*======= variáveis do sistema  ======*/
-   
     
     if(isset($_POST['nome'])){
         $nome=filter_input(INPUT_POST,'nome',FILTER_SANITIZE_SPECIAL_CHARS);
@@ -11,7 +12,6 @@
         $nome="";
     }
 
- 
     if(isset($_POST['email'])){ 
         $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL); 
     } elseif(isset($_GET['email'])){ 
@@ -22,15 +22,15 @@
 
     if(isset($_POST['senha'])){  
         $senha=$_POST['senha'];
-        $hashSenha="";    
+        $hashSenha= $obj_password->passwordHash($senha);    
     } else {  
         $senha=null; 
         $hashSenha=null; 
     }
-    if(isset($_POST['senhaConf'])){  
-        $senhaConf=$_POST['senhaConf'];  
+    if(isset($_POST['senhaConfirmacao'])){  
+        $senhaConfirmacao=$_POST['senhaConfirmacao'];  
     } else { 
-        $senhaConf=null; 
+        $senhaConfirmacao=null; 
     }
  
     $dataCreate=date("Y-m-d H:i:s");
@@ -40,13 +40,13 @@
    $arrVar=[
         "nome"=>$nome,
         "email"=>$email,
-        // "senha"=>$senha,
+        "senha" =>$senha,
         "hashSenha"=>$hashSenha,
         "dataCreate"=>$dataCreate,
         "token"=>$token,
     ];
 
-    // var_dump($arrVar);
+
 
    
    
