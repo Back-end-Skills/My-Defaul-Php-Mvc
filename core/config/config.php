@@ -1,7 +1,7 @@
 <?php
 #Caminhos absolutos
 $pastaInterna="github/My-Defaul-Php-Mvc/";
-define('DIRPAGE',"https://{$_SERVER['HTTP_HOST']}/{$pastaInterna}");
+define('DIRPAGE',"http://{$_SERVER['HTTP_HOST']}/{$pastaInterna}");
 (substr($_SERVER['DOCUMENT_ROOT'],-1)=='/')?$barra="":$barra="/";
 define('DIRREQ',"{$_SERVER['DOCUMENT_ROOT']}{$barra}{$pastaInterna}");
 
@@ -13,7 +13,7 @@ define('DIRTP', DIRPAGE.'assets/templates/');
 
 #Acesso ao db
 define('HOST',"localhost");
-define('DB',"");
+define('DB',"teste_mvc");
 define('USER',"root");
 define('PASS',"");
 

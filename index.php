@@ -4,6 +4,7 @@
 
     require "core/config/config.php";              
     require "vendor/autoload.php";  
+    require "core/helpers/variables.php";
 
     $dispatch=new Classes\ClassDispatch();
     include($dispatch->getInclusao());

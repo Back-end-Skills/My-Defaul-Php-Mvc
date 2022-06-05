@@ -15,6 +15,9 @@
             "Classes\\":"source/classes/",
             "Models\\" : "source/models/",
             "Traits\\":"source/traits/"
-        }
+        },
+        "files" : [
+           
+        ]
     }
 }
