@@ -20,9 +20,9 @@
       
         
             <!-- START form de Cadastro-->
-            <form action="<?php echo DIRPAGE.'source/controllers/controllerRegister'; ?> " name="formCadastro" id="formCadastro" method="post" >				
+            <form action="<?php echo DIRPAGE.'source/controllers/controllerRegister'; ?> " name="formRegister" id="formRegister" method="post" >				
                                         
-
+                <div class="retorno__reg"></div>
                 <input type="text" name="nome"  id="nome" placeholder="Nome"  required><br><br>
                 <input type="email" name="email"  id="email" placeholder="meuemail@gmail.com"  required><br><br>			  
                                             
@@ -34,6 +34,9 @@
             </form>
 
     </div>
+
+    <script src="<?php echo DIRJS.'zepto.min.js'; ?>"></script>
+    <script src="<?php echo DIRJS.'main.js'; ?>"></script>
 
     </body>
 </html>    

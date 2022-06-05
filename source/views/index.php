@@ -20,6 +20,9 @@
        </nav>
 
     </header>
+
+    <script src="<?php echo DIRJS.'zepto.min.js'; ?>"></script>
+    <script src="<?php echo DIRJS.'main.js'; ?>"></script>
  
 </body>
 </html>
