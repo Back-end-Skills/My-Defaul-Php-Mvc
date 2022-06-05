@@ -33,8 +33,8 @@ class ModelRegister extends ModelCrud{
                 )
         );
     }
-    
-    public function confirmationSen($email, $token, $hashSenha){
+
+    public function confirmationSenha($email, $token, $hashSenha){
             
         $b=$this->selectDB("*","confirmation", "where email=? and token=?", array($email, $token));
         $r=$b->rowCount();
@@ -60,7 +60,7 @@ class ModelRegister extends ModelCrud{
 
 
     #Verificar a confirmação de cadastro pelo email        
-    public function confirmationCad($email, $token){
+    public function confirmationReg($email, $token){
 
         $b=$this->selectDB("*","confirmation","where email=? and token=?",array($email, $token));
         $r=$b->rowCount();

@@ -30,6 +30,7 @@
                 <input type="password" name="senhaConfirmacao"  id="senhaConfirmacao" placeholder="Confirme Sua Senha"  required><br><br>
                                         
                 <button type="submit" class="btn">Registrar</button><br>
+                <a href="<?php echo DIRPAGE.'login'; ?>" >Entrar</a><br>
                                     
             </form>
 

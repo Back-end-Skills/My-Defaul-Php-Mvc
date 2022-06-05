@@ -2,16 +2,26 @@
     namespace Classes;
 
     use Models\ModelRegister;
+    use Models\ModelLogin;
+    use Classes\ClassPassword;
+    use Classes\ClassSessions;
 
 
     class ClassValidate{ 
 
         private array $erro=[];
         private $register;
+        private $password;
+        private $login;       
+        private $tentativas;
+        private $session;
 
         public function __construct() 
         {
             $this->register=new ModelRegister();
+            $this->password=new ClassPassword();
+            $this->login   =new ModelLogin();
+            $this->session =new ClassSessions();
         }
 
         public function getErro(){   
@@ -127,7 +137,7 @@
                     "retorno"=>"success",
                     "erros"=>null
                 ];
-                /* $this->register->insertReg($arrVar);*/
+                $this->register->insertReg($arrVar);
             }
             return json_encode($arrResponse);
            
@@ -165,7 +175,7 @@
                   
                     $arrayResponse=[
                         "retorno"=>"success",
-                        "page"=>"myaccount",
+                        "page"=>"home-logado",
                         "tentativas"=>$this->tentativas
                     ];
                 
