@@ -1,8 +1,6 @@
 <?php   
      
     /*======= variáveis do sistema  ======*/
-   
-    
     if(isset($_POST['nome'])){
         $nome=filter_input(INPUT_POST,'nome',FILTER_SANITIZE_SPECIAL_CHARS);
     } elseif(isset($_GET['nome'])){
@@ -40,13 +38,12 @@
    $arrVar=[
         "nome"=>$nome,
         "email"=>$email,
-        // "senha"=>$senha,
         "hashSenha"=>$hashSenha,
         "dataCreate"=>$dataCreate,
         "token"=>$token,
     ];
 
-    // var_dump($arrVar);
+    var_dump($arrVar);
 
    
    
