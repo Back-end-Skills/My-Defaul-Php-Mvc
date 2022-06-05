@@ -1,0 +1,20 @@
+{
+    "name": "isaquedev/project-mvc-php",
+    "description": "Meu php pradrão mvc",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name" : "Isaque Menezes",
+            "email": "isaque-menezes@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Classes\\":"source/classes/",
+            "Models\\" : "source/models/",
+            "Traits\\":"source/traits/"
+        }
+    }
+}
