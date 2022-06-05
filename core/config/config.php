@@ -1,6 +1,6 @@
 <?php
 #Caminhos absolutos
-$pastaInterna="";
+$pastaInterna="github/My-Defaul-Php-Mvc/";
 define('DIRPAGE',"https://{$_SERVER['HTTP_HOST']}/{$pastaInterna}");
 (substr($_SERVER['DOCUMENT_ROOT'],-1)=='/')?$barra="":$barra="/";
 define('DIRREQ',"{$_SERVER['DOCUMENT_ROOT']}{$barra}{$pastaInterna}");
