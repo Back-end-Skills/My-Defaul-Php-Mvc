@@ -5,15 +5,22 @@
     require "core/config/config.php";              
     require "vendor/autoload.php";  
 
-    echo "Minha constante config DIRPAGE para caminho da url <br> ". DIRPAGE;
-    echo "<hr>";
+    use  Traits\TraitParseUrl;
+    
+    class ClassTeste{
+        use TraitParseUrl;
+        public function __construct(){
+            var_dump($this->parseUrl(2));
+           
 
-    echo "Minha constante config DIRREQ para caminho físico<br> ". DIRREQ;
-    echo "<hr>";
+        }
 
-    echo "Minha constante config DOMAIN para caminho <br>". DOMAIN;
+    }
+    $obj= new ClassTeste();
 
-  
+    //Opção 2
+    //echo Traits\TraitParseUrl::parseUrl(2)
 
-
-
+   
+    //http://localhost/github/My-Defaul-Php-Mvc/pasta1/teste/core
+     //Output string(4) "core" 
