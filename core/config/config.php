@@ -13,9 +13,9 @@ define('DIRTP', DIRPAGE.'assets/templates/');
 
 #Acesso ao db
 define('HOST',"localhost");
-define('DB',"teste_mvc");
+define('DATABASE',"teste_mvc");
 define('USER',"root");
-define('PASS',"");
+define('PASSWORD',"");
 
 
 

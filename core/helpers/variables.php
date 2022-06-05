@@ -21,9 +21,11 @@
     }
 
     if(isset($_POST['senha'])){  
-        $senha=$_POST['senha'];    
+        $senha=$_POST['senha'];
+        $hashSenha="";    
     } else {  
         $senha=null; 
+        $hashSenha=null; 
     }
     if(isset($_POST['senhaConf'])){  
         $senhaConf=$_POST['senhaConf'];  
@@ -32,8 +34,19 @@
     }
  
     $dataCreate=date("Y-m-d H:i:s");
-    
+
     $token=bin2hex(random_bytes(64));
+
+   $arrVar=[
+        "nome"=>$nome,
+        "email"=>$email,
+        // "senha"=>$senha,
+        "hashSenha"=>$hashSenha,
+        "dataCreate"=>$dataCreate,
+        "token"=>$token,
+    ];
+
+    // var_dump($arrVar);
 
    
    
